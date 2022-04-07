@@ -36,7 +36,7 @@ public class main {
         view mivista = new view();
         Scanner obj = new Scanner(doc);
         Scanner obj2 = new Scanner(traducir);
-        Scanner scan = new Scanner(System.in); 
+        Scanner scan = new Scanner(System.in);
         BinarySearchTree treeFrench = new BinarySearchTree();
         BinarySearchTree treeEnglish = new BinarySearchTree();
         String palabras = new String();
@@ -74,7 +74,7 @@ public class main {
             switch (numMenu) {
                 case 1:
                     array = new String[3];
-                    mivista.mensaje("Ingrese las palabras en ingles,espaniol,frances: |house,casa,loger|");
+                    mivista.mensaje("Ingrese las palabras en este orden: ingles,espaniol,frances: Ejempo(|house,casa,loger|)");
                     palabras = scan.nextLine();
                     array = palabras.split(",");
                     palabra = new association<String, String>(array[2].trim(),array[1].trim());
@@ -82,12 +82,25 @@ public class main {
                     treeFrench.insert(palabra);
                     treeEnglish.insert(palabra2);
                             // print inorder traversal of the BST
+                    System.out.println("**************************Impresion de las palabras en Frances en orden**************************");
                     treeFrench.inorder();
-                    System.out.println("*****************************************************");
+                    System.out.println("**************************Impresion de las palabras en Ingles en orden**************************");
                     treeEnglish.inorder();
                 break;
                 case 2:
-
+                    array = new String[3];
+                    mivista.mensaje("Ingrese las palabras en este orden: ingles,espaniol,frances: Ejempo(|house,casa,loger|)");
+                    palabras = scan.nextLine();
+                    array = palabras.split(",");
+                    palabra = new association<String, String>(array[2].trim(),array[1].trim());
+                    palabra2 = new association<String, String>(array[0].trim(),array[1].trim());
+                    treeFrench.insert(palabra);
+                    treeEnglish.insert(palabra2);
+                        // print inorder traversal of the BST
+                    System.out.println("**************************Impresion de las palabras en Frances en orden**************************");
+                    treeFrench.inorder();
+                    System.out.println("**************************Impresion de las palabras en Ingles en orden**************************");
+                    treeEnglish.inorder();
                 break;
                 case 3:
 

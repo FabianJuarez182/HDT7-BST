@@ -25,6 +25,9 @@ public class view {
         private Scanner scan;
 
         //---------------------------METODOS------------------------------
+        public view(){
+            scan = new Scanner(System.in); // Scanner
+        }    
         /*****************************************************************
      * retorna el valor del elemento seleccionado por el usuario
      * @return
@@ -36,9 +39,9 @@ public class view {
         boolean isNumeric = false;
         while(!salir.equalsIgnoreCase("si")){
             //Se imprime el menu en pantalla y se le pide al usuario un numero del menu
-            System.out.println("\n************************* Escoja el map que desea utilizar ************************************\n");
+            System.out.println("\n************************* Escoja la opcion que desea utilizar ************************************\n");
             System.out.println("1. agregar");
-            System.out.println("2. editar");
+            System.out.println("2. editar (si no se encuentra se agregara)");
             System.out.println("3. eliminar");
             System.out.println("4. ver traduccion");
             System.out.println("5. salir");
@@ -64,5 +67,14 @@ public class view {
             }
         return numMenu;
     }
-    //****************************************************************
+
+    public void salir(){
+        System.out.println(" ------------ Gracias por utilizar nuestro programa ------------ \n"); // Mensaje que se mostrara al cerrar el programa
+        System.exit(0);
+        scan.close();
+    }
+
+    public void mensaje(String mensaje){
+        System.out.println(mensaje);
+    }
 }

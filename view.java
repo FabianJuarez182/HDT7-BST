@@ -1,9 +1,9 @@
 /**
  * 
  * Copyright (C), 2022-2023, FabianJuarez
- * FileName: View
+ * FileName: view
  * Author:   Fabián Juárez
- * Date:     06/04/2022
+ * Date:     08/04/2022
 ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 ─██████████████─██████████████─██████████████───██████████─██████████████─██████──────────██████────────────██████─██████──██████─██████████████─████████████████───██████████████─██████████████████─
 ─██░░░░░░░░░░██─██░░░░░░░░░░██─██░░░░░░░░░░██───██░░░░░░██─██░░░░░░░░░░██─██░░██████████──██░░██────────────██░░██─██░░██──██░░██─██░░░░░░░░░░██─██░░░░░░░░░░░░██───██░░░░░░░░░░██─██░░░░░░░░░░░░░░██─
@@ -30,7 +30,7 @@ public class view {
         }    
         /*****************************************************************
      * retorna el valor del elemento seleccionado por el usuario
-     * @return
+     * @return numMenu
      */
     public int menu(){ //Menu principal para que el usuario eliga la opcion a realizar
         String salir = "";
@@ -74,6 +74,10 @@ public class view {
         scan.close();
     }
 
+    
+    /** 
+     * @param mensaje
+     */
     public void mensaje(String mensaje){
         System.out.println(mensaje);
     }
